@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDS System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="main-heading">IDS Protection Deactivated</h1>
+        <button id="activate-btn" onclick="activateIDS()">Activate IDS</button>
+        <button id="scan-btn" onclick="pcap()">SCAN PCAP</button>
+        <button id="stop-btn" onclick="deactivateIDS()">Deactivate IDS</button>
+    </div>
+
+    <script>
+        function activateIDS() {
+            document.getElementById("main-heading").innerText = "IDS Protection Activated";
+            fetch('',{
+                method:'POST'
+            })
+        }
+        function deactivateIDS(){
+            document.getElementById("main-heading").innerText = "IDS Protection Deactivated";
+            // fetch('',{
+            //     method:'POST'
+            // })
+        }
+        function pcap(){
+            fetch('pcap',{})
+        }
+    </script>
+</body>
+</html>

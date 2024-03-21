@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title >IDS</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: sans-serif;
+        }
+        
+        section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h1 {
+            font-size: 3em;
+        }
+        
+        button {
+            font-size: 2.5em;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .fcc-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 25px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1 id = "main-heading" >IDS protection disabled</h1>
+        <button type="button" onclick="activateIDS()">Activate IDS</button>
+        <a class = "fcc-btn" type = "button"  href = "upload">Upload PCAP</a>
+        <a class = "fcc-btn" type="button" href = "downthreat">Download Threat Report</a>
+    </section>
+    <script>
+        function activateIDS() {
+            document.getElementById("main-heading").innerText = "IDS Protection Activated";
+            fetch('',{
+                method:'POST'
+            })
+        }
+    </script>
+</body>
+</html>
